@@ -5,6 +5,8 @@ double serviceLn(double x, int i, double res, double sum) {
     static int depth = 1;
     double calc;
 
+    printf("sum = %f res = %f depth = %i\n", sum, res, depth);
+
     if (depth + 1 == i) {
         return sum;
     }
@@ -15,7 +17,8 @@ double serviceLn(double x, int i, double res, double sum) {
         depth++;
         res = serviceLn(x, i, calc, sum);
     }
-    printf("sum = %f res = %f \n", sum, res);
+    printf("sum = %f res = %f depth = %i\n", sum, res, depth);
+
     return res;
 }
 

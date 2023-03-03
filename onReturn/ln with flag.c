@@ -3,22 +3,26 @@
 
 double ln(double x, int i) {
     static double sum = 0;
-    static int flag = 0;
+    static int depth = 0;
     double res, calc;
+
+    printf("sum = %f res = %f depth = %i\n", sum, res, depth);
 
     if (i == 1) {
         res = x;
-        flag++;
+        depth++;
     }
 
     else {
         calc = -x * (i - 1) / i;
-        flag++;
+        depth++;
         res = ln(x, i - 1) * calc;
     }
     sum += res;
 
-    if (flag == i) return sum;
+    printf("sum = %f res = %f depth = %i\n", sum, res, depth);
+
+    if (depth == i) return sum;
     else return res;
 }
 
