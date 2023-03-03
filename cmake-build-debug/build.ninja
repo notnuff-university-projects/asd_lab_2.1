@@ -49,12 +49,6 @@ cmake_ninja_workdir = /home/notnuff/ASD_labs/sem2$ 2.1/cmake-build-debug/
 
 build cmake_object_order_depends_target_sem2_2_1: phony || CMakeFiles/sem2_2_1.dir
 
-build CMakeFiles/sem2_2_1.dir/onReturn/ln_with_flag.c.o: C_COMPILER__sem2_2_1_Debug /home/notnuff/ASD_labs/sem2$ 2.1/onReturn/ln$ with$ flag.c || cmake_object_order_depends_target_sem2_2_1
-  DEP_FILE = CMakeFiles/sem2_2_1.dir/onReturn/ln_with_flag.c.o.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu11
-  OBJECT_DIR = CMakeFiles/sem2_2_1.dir
-  OBJECT_FILE_DIR = CMakeFiles/sem2_2_1.dir/onReturn
-
 build CMakeFiles/sem2_2_1.dir/onDescent/ln.c.o: C_COMPILER__sem2_2_1_Debug /home/notnuff/ASD_labs/sem2$ 2.1/onDescent/ln.c || cmake_object_order_depends_target_sem2_2_1
   DEP_FILE = CMakeFiles/sem2_2_1.dir/onDescent/ln.c.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu11
@@ -69,7 +63,7 @@ build CMakeFiles/sem2_2_1.dir/onDescent/ln.c.o: C_COMPILER__sem2_2_1_Debug /home
 #############################################
 # Link the executable sem2_2_1
 
-build sem2_2_1: C_EXECUTABLE_LINKER__sem2_2_1_Debug CMakeFiles/sem2_2_1.dir/onReturn/ln_with_flag.c.o CMakeFiles/sem2_2_1.dir/onDescent/ln.c.o
+build sem2_2_1: C_EXECUTABLE_LINKER__sem2_2_1_Debug CMakeFiles/sem2_2_1.dir/onDescent/ln.c.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/sem2_2_1.dir
   POST_BUILD = :
