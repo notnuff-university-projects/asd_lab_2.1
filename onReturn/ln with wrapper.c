@@ -10,6 +10,7 @@ struct result serviceLn(double x, int i, int depth) {
     struct result res;
     res.sum = 0;
     double calc;
+
     if (i == 1) {
         res.current = x;
     }
@@ -21,9 +22,9 @@ struct result serviceLn(double x, int i, int depth) {
     }
 
     res.sum += res.current;
-    printf("sum = %f res = %f \n", res.sum, res.current);
 
-    if (i == depth) return res;
+    printf("sum = %f res = %f i = %i\n", res.sum, res.current, i);
+
     return res;
 }
 
@@ -32,7 +33,7 @@ double ln (double x, int i) {
 }
 
 int main() {
-    printf ("result = %f\n", ln(0.5, 18));
+    printf ("result = %f\n", ln(0.5, 5));
     printf ("library result = %f", log(1.5));
     return 0;
 }

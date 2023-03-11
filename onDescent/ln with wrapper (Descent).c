@@ -3,6 +3,7 @@
 
 double serviceLn(double x, int i, int depth, double res, double sum) {
     double calc;
+    sum += res;
 
     printf("sum = %f res = %f i = %i\n", sum, res, i);
 
@@ -11,7 +12,6 @@ double serviceLn(double x, int i, int depth, double res, double sum) {
     }
 
     else {
-        sum += res;
         calc = -res * x * i / (i + 1);
         res = serviceLn(x, i + 1, depth, calc, sum);
     }
@@ -24,7 +24,7 @@ double ln(double x, int i) {
 }
 
 int main() {
-    printf ("result = %f\n", ln(0.5, 10));
+    printf ("result = %f\n", ln(0.5, 5));
     printf ("library result = %f", log(1.5));
     return 0;
 }

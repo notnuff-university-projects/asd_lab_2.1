@@ -1,5 +1,5 @@
 CMakeFiles/sem2_2_1.dir/ln_with_closure_(maybe).c.o: \
- /home/notnuff/ASD_labs/sem2\ 2.1/ln\ with\ closure\ (maybe).c \
+ /home/notnuff/ASD_labs/sem2\ 2.1/serviceLn\ with\ closure\ (maybe).c \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
