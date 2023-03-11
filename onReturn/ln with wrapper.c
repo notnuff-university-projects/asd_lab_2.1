@@ -1,30 +1,38 @@
 #include <stdio.h>
 #include <math.h>
 
-double ln(double x, int i, int depth) {
-    static double sum = 0;
-    double res, calc;
+struct result {
+    double current;
+    double sum;
+};
+
+struct result serviceLn(double x, int i, int depth) {
+    struct result res;
+    res.sum = 0;
+    double calc;
     if (i == 1) {
-        res = x;
+        res.current = x;
     }
 
     else {
         calc = -x * (i - 1) / i;
-        res = ln(x, i - 1, depth) * calc;
+        res = serviceLn(x, i - 1, depth);
+        res.current *= calc;
     }
-    sum += res;
-    printf("sum = %f res = %f \n", sum, res);
 
-    if (i == depth) return sum;
+    res.sum += res.current;
+    printf("sum = %f res = %f \n", res.sum, res.current);
+
+    if (i == depth) return res;
     return res;
 }
 
-double higherLn (double x, int i) {
-    return ln(x,i,i);
+double ln (double x, int i) {
+    return serviceLn(x, i, i).sum;
 }
 
 int main() {
-    printf ("result = %f\n", higherLn(0.5, 18));
+    printf ("result = %f\n", ln(0.5, 18));
     printf ("library result = %f", log(1.5));
     return 0;
 }
