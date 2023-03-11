@@ -14,7 +14,7 @@ double ln(double x, int depth) {
 }
 
 int main() {
-    printf ("result = %f\n", ln(0.5, 5));
+    printf ("result = %f\n", ln(0.5, 1));
     printf ("library result = %f", log(1.5));
     return 0;
 }
