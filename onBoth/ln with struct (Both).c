@@ -13,7 +13,7 @@ struct result serviceLn(double x, double curr, int i, int depth) {
     res.current = curr;
     local = res.current;
 
-    printf("local = %f res.current = %f res.sum = %f i = %i\n", local, res.current, res.sum, i - 1);
+    printf("local = %f res = %f sum = %f i = %i\n", local, res.current, res.sum, i - 1);
 
     if (i - 1 == depth) {
         res.sum = local;
@@ -27,7 +27,7 @@ struct result serviceLn(double x, double curr, int i, int depth) {
     }
 
     res.sum += local;
-    printf("local = %f res.current = %f res.sum = %f i = %i\n", local, res.current, res.sum, i - 1);
+    printf("local = %f res = %f sum = %f i = %i\n", local, res.current, res.sum, i - 1);
 
     return res;
 }
