@@ -11,6 +11,8 @@ struct result serviceLn(double x, int i, int depth) {
     res.sum = 0;
     double calc;
 
+    printf("sum = %f res = %f i = %i\n", res.sum, res.current, i);
+
     if (i == 1) {
         res.current = x;
     }
@@ -33,7 +35,7 @@ double ln (double x, int i) {
 }
 
 int main() {
-    printf ("result = %f\n", ln(0.5, 1));
+    printf ("result = %f\n", ln(0.5, 5));
     printf ("library result = %f", log(1.5));
     return 0;
 }
